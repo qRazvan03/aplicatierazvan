@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/static/THEME2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 3rem;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 200px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+a {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.dashboard-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn-primary, .btn-secondary {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+    border-color: #545b62;
+}
+
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Stiluri pentru pagina de contact */
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2, h4 {
+    color: red;
+}
+
+p {
+    color: black;
+}
+
+.email {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

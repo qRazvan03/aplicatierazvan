@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CyberHub Razvan</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">CyberHub Razvan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Acasă</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('despre') }}">Info portal</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="dashboard-content">
+            <h2>Dashboard</h2>
+            <p>Lista utilizatori:</p>
+            <ul class="list-group">
+                {% for user in users %}
+                    <li class="list-group-item">{{ user.nume_utilizator }} - {{ user.email }}</li>
+                {% endfor %}
+            </ul>
+            <h3 class="mt-4">Inteligența Artificială</h3>
+            <p>Inteligența Artificială (AI) este un domeniu de cercetare transdisciplinar care îmbină aspecte ale informaticii, matematicii și ingineriei pentru a elabora metode de simulare a inteligenței umane. Inteligența artificială a cunoscut o creștere rapidă în ultimii ani și a devenit deja un element de bază în multe industrii, inclusiv medicina, finanț.</p>
+            <p>Unul dintre cele mai populare subdomenii ale AI este învățarea automată, care permite sistemelor să învețe și să se dezvolte pe baza datelor. Acest lucru se face cu ajutorul unui set de algoritmi care procesează o cantitate mare de date și sunt capabili să găsească modele și să tragă concluzii sau să facă previziuni, dar fără o programare explicită pentru fiecare sarcină.</p>
+            <p>De asemenea, AI se ocupă de subcategorii cum ar fi prelucrarea limbajului natural (PLN), care este responsabilă pentru a permite computerelor să înțeleagă și să comun.</p>
+            <p>Folosirea AI în ceea ce privește cibernetica este, de asemenea, una foarte promițătoare. Prin intermediul inteligenței artificiale, sistemele pot identifica și răspunde la amenințările cibernetice în moduri pe care niciun om nu ar putea, și de.</p>
+            <p>Inteligența Artificială (AI) are un impact semnificativ asupra securității cibernetice, revoluționând modul în care sunt detectate și combătute amenințările digitale. AI poate analiza volume mari de date pentru a identifica tipare și comportamente suspecte în timp real, ceea ce permite o reacție rapidă și eficientă la potențialele atacuri cibernetice. Algoritmii de învățare automată pot evolua constant, adaptându-se la noi tipuri de amenințări și devenind din ce în ce mai eficienți în protejarea infrastructurilor digitale. Astfel, AI nu doar că îmbunătățește capacitatea de apărare cibernetică, dar reduce și timpul de răspuns în cazul unui atac, minimizând impactul acestuia asupra organizațiilor și utilizatorilor.</p>
+            <p>În cele din urmă, Inteligența Artificială este o revoluție tehnologică care schimbă modul în care lucrăm și trăim. Odată cu dezvoltarea tehnologiilor, putem vedea tot mai multe aplicații de AI care sunt aduse la viață,.</p>
+            <h3 class="mt-4">AI Outbreak - 4 iunie 2024</h3>
+            <p>ChatGPT, chatbotul OpenAI, este indisponibil pentru mai mulţi utilizatori din întreaga lume în ultimele ore. Mulţi utilizatori au postat despre această problemă pe X şi Threads.</p>
+            <p>Conform Down Detector, platformă care oferă informaţii în timp real despre starea site-urilor web, începând de la ora 9:30 (ora României) foarte mulţi utilizatori de ChatGPT au raportat problema şi faptul că serviciul s-a blocat.</p>
+            <p>Pe site-ul său de stare a serviciului, OpenAI a marcat acest incident ca fiind o întrerupere majoră şi a declarat că firma a identificat bug-ul şi lucrează la o remediere. Au existat câteva întreruperi parţiale pentru utilizatorii ChatGPT în ultimele 30 de zile. Cel mai notabil incident a fost cel în care utilizatorii nu au putut accesa rezultatele web din cauza întreruperii API Bing luna trecută.</p>
+            <p>ChatGPT are peste 100 de milioane de utilizatori săptămânali, potrivit OpenAI.</p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Înapoi la pagina principală</a>
+        </div>
+    </div>
+</body>
+</html>

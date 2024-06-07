@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razvan's CyberHub</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">CyberHub Razvan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Acasă</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login') }}">Autentificare</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('register') }}">Înregistrare</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('despre') }}">Info portal</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Portalul CyberHub by Razvan</h1>
+                <p>Acest site a fost creat de Florentin-Răzvan Petroșanu, student în anul 3 la Cibernetică Economică, Universitatea din București, cu scopul de a atrage atenția asupra vulnerabilităților în aplicații WEB.</p>
+                <h2 class="card-subtitle mb-2 text-muted">Securitatea Aplicațiilor Web</h2>
+                <p>Securitatea aplicațiilor web este un domeniu ce primeste pe zi ce trece din ce in ce mai multa atentie. Conform OWASP, principalele vulnerabilități care trebuie abordate includ:</p>
+                <ul>
+                    <li>Injection</li>
+                    <li>Broken Authentication</li>
+                    <li>Sensitive Data Exposure</li>
+                    <li>XML External Entities (XXE)</li>
+                    <li>Broken Access Control</li>
+                    <li>Security Misconfiguration</li>
+                    <li>Cross-Site Scripting (XSS)</li>
+                    <li>Insecure Deserialization</li>
+                    <li>Using Components with Known Vulnerabilities</li>
+                    <li>Insufficient Logging & Monitoring</li>
+                </ul>
+                <p>Aceste vulnerabilități pot fi exploatate de atacatori pentru a compromite securitatea aplicațiilor web. Implementarea măsurilor adecvate pentru a preveni aceste atacuri și pentru a proteja datele utilizatorilor este un factor care trebuie luat in considerare de orice dezvoltator de aplicații web.</p>
+                <p>Pentru mai multe informații, consultați lucrarea mea de licență despre analiza vulnerabilităților in aplicațiilor web moderne.</p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Înapoi la pagina principală</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
