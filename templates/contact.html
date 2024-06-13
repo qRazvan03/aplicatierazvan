@@ -10,6 +10,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .highlight-box {
+            background-color: rgb(27, 27, 82); /* Albastru opac */
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            color: rgb(255, 4, 0);
+            text-align: center;
+        }
+        .text-center-highlight {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,7 +46,9 @@
     </nav>
 
     <div class="container mt-5">
-        <h2 class="text-center" style="color: red;">Contactează-ne</h2>
+        <div class="text-center-highlight">
+            <h2 class="highlight-box">Ne puteți contacta direct aici:</h2>
+        </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="contact-form">
@@ -59,7 +74,7 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-12 text-center">
-                <h4 style="color: red;">Ne puteți găsi aici:</h4>
+                <h4 class="highlight-box">Sediul nostru se afla pe harta de jos:</h4>
                 <div id="map" style="height: 400px;">
                     <gmp-map center="44.159149169921875,28.628372192382812" zoom="14" map-id="DEMO_MAP_ID">
                         <gmp-advanced-marker position="44.159149169921875,28.628372192382812" title="My location"></gmp-advanced-marker>
@@ -69,8 +84,8 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-12 text-center">
-                <h4 style="color: red;">Contactați-ne la:</h4>
-                <p class="email">
+                <h4 class="highlight-box">Sau, contactați-ne la adresa:</h4>
+                <p class="email highlight-box">
                     petrosanuflorentin@gmail.com
                 </p>
             </div>

@@ -10,6 +10,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .text-center-bold {
+            text-align: center;
+            font-weight: bold;
+        }
+        .text-bold-uppercase {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,9 +48,9 @@
     <div class="container mt-5">
         <div class="card">
             <div class="card-body">
-                <h1 class="card-title">Portalul CyberHub by Razvan</h1>
+                <h1 class="card-title text-center-bold">Portalul CyberHub by Razvan</h1>
                 <p>Acest site a fost creat de Florentin-Răzvan Petroșanu, student în anul 3 la Cibernetică Economică, Universitatea din București, cu scopul de a atrage atenția asupra vulnerabilităților în aplicații WEB.</p>
-                <h2 class="card-subtitle mb-2 text-muted">Securitatea Aplicațiilor Web</h2>
+                <h2 class="card-subtitle mb-2 text-muted text-bold-uppercase">Securitatea Aplicațiilor Web</h2>
                 <p>Securitatea aplicațiilor web este un domeniu ce primeste pe zi ce trece din ce in ce mai multa atentie. Conform OWASP, principalele vulnerabilități care trebuie abordate includ:</p>
                 <ul>
                     <li>Injection</li>
